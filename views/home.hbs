@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+{{>head}}
+{{>stylehome}}
+
+</head>
+
+<body>
+<div class = container>
+<div class="row" style="margin-top: 20%">
+	<h1 class="text-center" style="font-family: 'Raleway', sans-serif;"> what's the weather like? </h1> 
+</div>
+
+<div class="row">
+	<div class = "col-lg-4 col-lg-offset-4">
+<form action="/weather" method="POST">
+	<input type="text" name="location" placeholder="location"  style="width:60%">
+
+	<button> get the weather </button>
+
+
+</div>
+</div>
+
+</body>
+
+</html>
