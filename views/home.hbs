@@ -7,19 +7,27 @@
 
 <body>
 <div class = container>
+
+
 <div class="row" style="margin-top: 20%">
 	<h1 class="text-center" style="font-family: 'Raleway', sans-serif;"> what's the weather like? </h1> 
 </div>
 
 <div class="row">
-	<div class = "col-lg-4 col-lg-offset-4">
-<form action="/weather" method="POST">
-	<input type="text" name="location" placeholder="location"  style="width:60%">
+	<div class = "col-lg-3 col-lg-offset-4">
+<form action="/weather" method="POST" style="width: 550px">
+	<input type="text" class="form-control" name="location" placeholder="location" style="width:50%">
+	</div>
+	<div class = "col-lg-4">
+	<button class="btn btn-dark btn-sm" style="margin-top: 5px"> go</button>
+	</div>
 
-	<button> get the weather </button>
 
 
-</div>
+
+
+
+
 </div>
 
 </body>
