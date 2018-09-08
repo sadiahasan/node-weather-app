@@ -6,6 +6,8 @@ var app = express();
 var bodyParser = require("body-parser");
 hbs.registerPartials(__dirname + '/views/partials');
 
+const port = process.env.PORT || 3000;
+
 const weather = require('./weather')
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -39,7 +41,7 @@ app.post('/weather',(req,res) => {
 		if(e.code === 'ENOTFOUND') {
 
 		}else{
-			console.log(e.message + "cowcow");
+			console.log(e.message);
 			res.render('weather.hbs', {
 				location: location,
 				weatherMessage: 'Unable to connect to API servers'
@@ -48,6 +50,6 @@ app.post('/weather',(req,res) => {
 });
 });
 
-app.listen(3000, () => {
-	console.log(`Server is up on port 3000`);
-}); 
+app.listen(port, () => {
+	console.log(`Server is up on port ${port}`);
+	}); 
